@@ -1,0 +1,6 @@
+<launch>
+
+  <include file="$(find wego)/launch/robot_bring_up.launch"/>
+  <include file="$(find wego)/launch/lidar_bring_up.launch"/>
+
+</launch>

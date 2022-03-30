@@ -1,0 +1,27 @@
+<launch>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="0" />
+    <arg name="pkg" value="rplidar_ros" />
+    <arg name="file" value="rplidar_front.launch" />
+
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="3" />
+    <arg name="pkg" value="rplidar_ros" />
+    <arg name="file" value="rplidar_rear.launch" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="6" />
+    <arg name="pkg" value="laser_filters" />
+    <arg name="file" value="my_laser_filter.launch" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="10" />
+    <arg name="pkg" value="ira_laser_tools" />
+    <arg name="file" value="laserscan_multi_merger.launch" />
+  </include>
+
+</launch>

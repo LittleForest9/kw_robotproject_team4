@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find wego)/launch/realsense_bring_up.launch"/>
+  <include file="$(find wego)/launch/view_sensors.launch"/>
+  <!--<node pkg="wego" type="teleop_twist_keyboard" name="teleop_twist_keyboard"/>-->
+
+</launch>
+
+  
