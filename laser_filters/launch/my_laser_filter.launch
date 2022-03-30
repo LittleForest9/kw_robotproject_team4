@@ -1,0 +1,13 @@
+<launch>
+  <group ns="laser_f">
+    <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+      <rosparam command="load" file="$(find laser_filters)/launch/my_laser_config.yaml" />
+    </node>
+  </group>
+
+  <group ns="laser_r">
+    <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+      <rosparam command="load" file="$(find laser_filters)/launch/my_laser_config.yaml" />
+    </node>
+  </group>
+</launch>
